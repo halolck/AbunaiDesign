@@ -28,14 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.ESPPanel = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.colorstrlbl = new System.Windows.Forms.Label();
+            this.ESPBOXChb = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.HPChb = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.DISTANCEChb = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.NAMEChb = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.ColorPanel = new System.Windows.Forms.Panel();
+            this.SliderB = new CustomSlider.Slider();
+            this.SliderG = new CustomSlider.Slider();
+            this.SliderR = new CustomSlider.Slider();
+            this.toggleCheckbox4 = new CustomControls.ToggleCheckbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ESPColorCombo = new ReaLTaiizor.Controls.CrownComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toggleCheckbox2 = new CustomControls.ToggleCheckbox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.slider3 = new CustomSlider.Slider();
+            this.label14 = new System.Windows.Forms.Label();
             this.ABPanel = new System.Windows.Forms.Panel();
-            this.ellipseButoon4 = new HalolckUI.EllipseButoon();
-            this.ellipseButoon5 = new HalolckUI.EllipseButoon();
-            this.ellipseButoon6 = new HalolckUI.EllipseButoon();
             this.toggleCheckbox5 = new CustomControls.ToggleCheckbox();
             this.label15 = new System.Windows.Forms.Label();
             this.ABToggle = new CustomControls.ToggleCheckbox();
@@ -57,42 +77,41 @@
             this.ABELbl = new System.Windows.Forms.Label();
             this.ABSSlider = new CustomSlider.Slider();
             this.label28 = new System.Windows.Forms.Label();
+            this.LicensePanel = new System.Windows.Forms.Panel();
+            this.toggleCheckbox3 = new CustomControls.ToggleCheckbox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.ScanPanel = new System.Windows.Forms.Panel();
+            this.toggleCheckbox1 = new CustomControls.ToggleCheckbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.LicenseBtn = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.SettingBtn = new System.Windows.Forms.Button();
+            this.ScanBtn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.ESPBtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.AimBotBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.ESPPanel = new System.Windows.Forms.Panel();
-            this.toggleCheckbox2 = new CustomControls.ToggleCheckbox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.slider3 = new CustomSlider.Slider();
-            this.label14 = new System.Windows.Forms.Label();
-            this.SettingPanel = new System.Windows.Forms.Panel();
-            this.toggleCheckbox1 = new CustomControls.ToggleCheckbox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.LicensePanel = new System.Windows.Forms.Panel();
-            this.toggleCheckbox3 = new CustomControls.ToggleCheckbox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.LineChb = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.ellipseButoon4 = new HalolckUI.EllipseButoon();
+            this.ellipseButoon5 = new HalolckUI.EllipseButoon();
+            this.ellipseButoon6 = new HalolckUI.EllipseButoon();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.ABPanel.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.ESPPanel.SuspendLayout();
-            this.SettingPanel.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.ABPanel.SuspendLayout();
             this.LicensePanel.SuspendLayout();
+            this.ScanPanel.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,7 +145,7 @@
             this.panel10.Controls.Add(this.ESPPanel);
             this.panel10.Controls.Add(this.ABPanel);
             this.panel10.Controls.Add(this.LicensePanel);
-            this.panel10.Controls.Add(this.SettingPanel);
+            this.panel10.Controls.Add(this.ScanPanel);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(95, 28);
             this.panel10.Name = "panel10";
@@ -134,6 +153,402 @@
             this.panel10.TabIndex = 4;
             this.panel10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            // 
+            // ESPPanel
+            // 
+            this.ESPPanel.Controls.Add(this.HPChb);
+            this.ESPPanel.Controls.Add(this.NAMEChb);
+            this.ESPPanel.Controls.Add(this.LineChb);
+            this.ESPPanel.Controls.Add(this.DISTANCEChb);
+            this.ESPPanel.Controls.Add(this.panel14);
+            this.ESPPanel.Controls.Add(this.ESPBOXChb);
+            this.ESPPanel.Controls.Add(this.label6);
+            this.ESPPanel.Controls.Add(this.ColorPanel);
+            this.ESPPanel.Controls.Add(this.SliderB);
+            this.ESPPanel.Controls.Add(this.SliderG);
+            this.ESPPanel.Controls.Add(this.SliderR);
+            this.ESPPanel.Controls.Add(this.toggleCheckbox4);
+            this.ESPPanel.Controls.Add(this.label5);
+            this.ESPPanel.Controls.Add(this.ESPColorCombo);
+            this.ESPPanel.Controls.Add(this.label2);
+            this.ESPPanel.Controls.Add(this.toggleCheckbox2);
+            this.ESPPanel.Controls.Add(this.label11);
+            this.ESPPanel.Controls.Add(this.label12);
+            this.ESPPanel.Controls.Add(this.label13);
+            this.ESPPanel.Controls.Add(this.slider3);
+            this.ESPPanel.Controls.Add(this.label14);
+            this.ESPPanel.Location = new System.Drawing.Point(0, 0);
+            this.ESPPanel.Name = "ESPPanel";
+            this.ESPPanel.Size = new System.Drawing.Size(508, 318);
+            this.ESPPanel.TabIndex = 76;
+            this.ESPPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.ESPPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel14.Controls.Add(this.colorstrlbl);
+            this.panel14.Location = new System.Drawing.Point(250, 268);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(86, 20);
+            this.panel14.TabIndex = 88;
+            // 
+            // colorstrlbl
+            // 
+            this.colorstrlbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colorstrlbl.ForeColor = System.Drawing.Color.White;
+            this.colorstrlbl.Location = new System.Drawing.Point(0, -2);
+            this.colorstrlbl.Name = "colorstrlbl";
+            this.colorstrlbl.Size = new System.Drawing.Size(86, 21);
+            this.colorstrlbl.TabIndex = 89;
+            this.colorstrlbl.Text = "#000000";
+            // 
+            // ESPBOXChb
+            // 
+            this.ESPBOXChb.AutoSize = true;
+            this.ESPBOXChb.Checked = true;
+            this.ESPBOXChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.ESPBOXChb.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ESPBOXChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ESPBOXChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.ESPBOXChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.ESPBOXChb.Enable = true;
+            this.ESPBOXChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.ESPBOXChb.EnabledStringColor = System.Drawing.Color.White;
+            this.ESPBOXChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.ESPBOXChb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ESPBOXChb.ForeColor = System.Drawing.Color.White;
+            this.ESPBOXChb.Location = new System.Drawing.Point(374, 174);
+            this.ESPBOXChb.Name = "ESPBOXChb";
+            this.ESPBOXChb.Size = new System.Drawing.Size(95, 20);
+            this.ESPBOXChb.TabIndex = 87;
+            this.ESPBOXChb.Text = "ESP BOX";
+            this.ESPBOXChb.UseVisualStyleBackColor = true;
+            this.ESPBOXChb.CheckedChanged += new System.EventHandler(this.ESPBOXChb_CheckedChanged);
+            // 
+            // HPChb
+            // 
+            this.HPChb.AutoSize = true;
+            this.HPChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.HPChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HPChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.HPChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.HPChb.Enable = true;
+            this.HPChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.HPChb.EnabledStringColor = System.Drawing.Color.White;
+            this.HPChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.HPChb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.HPChb.ForeColor = System.Drawing.Color.White;
+            this.HPChb.Location = new System.Drawing.Point(375, 226);
+            this.HPChb.Name = "HPChb";
+            this.HPChb.Size = new System.Drawing.Size(82, 20);
+            this.HPChb.TabIndex = 86;
+            this.HPChb.Text = "HP Bar";
+            this.HPChb.UseVisualStyleBackColor = true;
+            this.HPChb.CheckedChanged += new System.EventHandler(this.HPChb_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(353, 132);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 30);
+            this.label6.TabIndex = 85;
+            this.label6.Text = "Misc";
+            // 
+            // DISTANCEChb
+            // 
+            this.DISTANCEChb.AutoSize = true;
+            this.DISTANCEChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.DISTANCEChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DISTANCEChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.DISTANCEChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.DISTANCEChb.Enable = true;
+            this.DISTANCEChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.DISTANCEChb.EnabledStringColor = System.Drawing.Color.White;
+            this.DISTANCEChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.DISTANCEChb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DISTANCEChb.ForeColor = System.Drawing.Color.White;
+            this.DISTANCEChb.Location = new System.Drawing.Point(375, 278);
+            this.DISTANCEChb.Name = "DISTANCEChb";
+            this.DISTANCEChb.Size = new System.Drawing.Size(94, 20);
+            this.DISTANCEChb.TabIndex = 84;
+            this.DISTANCEChb.Text = "Distance";
+            this.DISTANCEChb.UseVisualStyleBackColor = true;
+            this.DISTANCEChb.CheckedChanged += new System.EventHandler(this.DISTANCEChb_CheckedChanged);
+            // 
+            // NAMEChb
+            // 
+            this.NAMEChb.AutoSize = true;
+            this.NAMEChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.NAMEChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NAMEChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.NAMEChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.NAMEChb.Enable = true;
+            this.NAMEChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.NAMEChb.EnabledStringColor = System.Drawing.Color.White;
+            this.NAMEChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.NAMEChb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.NAMEChb.ForeColor = System.Drawing.Color.White;
+            this.NAMEChb.Location = new System.Drawing.Point(375, 252);
+            this.NAMEChb.Name = "NAMEChb";
+            this.NAMEChb.Size = new System.Drawing.Size(77, 20);
+            this.NAMEChb.TabIndex = 83;
+            this.NAMEChb.Text = "Name";
+            this.NAMEChb.UseVisualStyleBackColor = true;
+            this.NAMEChb.CheckedChanged += new System.EventHandler(this.NAMEChb_CheckedChanged);
+            // 
+            // ColorPanel
+            // 
+            this.ColorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ColorPanel.Location = new System.Drawing.Point(250, 176);
+            this.ColorPanel.Name = "ColorPanel";
+            this.ColorPanel.Size = new System.Drawing.Size(86, 86);
+            this.ColorPanel.TabIndex = 77;
+            // 
+            // SliderB
+            // 
+            this.SliderB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.SliderB.ForeColor = System.Drawing.Color.White;
+            this.SliderB.L_AfterValue = null;
+            this.SliderB.L_BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.SliderB.L_BarSize = 20;
+            this.SliderB.L_BarWidthSize = 10;
+            this.SliderB.L_BeforeValue = "Blue: ";
+            this.SliderB.L_Enable = true;
+            this.SliderB.L_IsFull = true;
+            this.SliderB.L_IsRound = false;
+            this.SliderB.L_LowBar = 0;
+            this.SliderB.L_Maximum = 255;
+            this.SliderB.L_Minimum = 0;
+            this.SliderB.L_Orientation = CustomSlider.Orientation.Horizontal_LR;
+            this.SliderB.L_SliderColor = System.Drawing.Color.RoyalBlue;
+            this.SliderB.L_Value = 0;
+            this.SliderB.L_ValuePos = CustomSlider.ValuePos.Left;
+            this.SliderB.L_ValueShow = true;
+            this.SliderB.Location = new System.Drawing.Point(28, 265);
+            this.SliderB.Name = "SliderB";
+            this.SliderB.PreWidth = 0F;
+            this.SliderB.RearWidth = 0F;
+            this.SliderB.Size = new System.Drawing.Size(206, 20);
+            this.SliderB.TabIndex = 76;
+            this.SliderB.Text = "slider6";
+            this.SliderB.ValueHeight = 1;
+            this.SliderB.ValueWidth = 2;
+            this.SliderB.LValueChanged += new CustomSlider.Slider.LValueChangedEventHandler(this.SliderR_LValueChanged);
+            // 
+            // SliderG
+            // 
+            this.SliderG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.SliderG.ForeColor = System.Drawing.Color.White;
+            this.SliderG.L_AfterValue = null;
+            this.SliderG.L_BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.SliderG.L_BarSize = 20;
+            this.SliderG.L_BarWidthSize = 10;
+            this.SliderG.L_BeforeValue = "Green: ";
+            this.SliderG.L_Enable = true;
+            this.SliderG.L_IsFull = true;
+            this.SliderG.L_IsRound = false;
+            this.SliderG.L_LowBar = 0;
+            this.SliderG.L_Maximum = 255;
+            this.SliderG.L_Minimum = 0;
+            this.SliderG.L_Orientation = CustomSlider.Orientation.Horizontal_LR;
+            this.SliderG.L_SliderColor = System.Drawing.Color.RoyalBlue;
+            this.SliderG.L_Value = 0;
+            this.SliderG.L_ValuePos = CustomSlider.ValuePos.Left;
+            this.SliderG.L_ValueShow = true;
+            this.SliderG.Location = new System.Drawing.Point(28, 240);
+            this.SliderG.Name = "SliderG";
+            this.SliderG.PreWidth = 10F;
+            this.SliderG.RearWidth = 0F;
+            this.SliderG.Size = new System.Drawing.Size(206, 20);
+            this.SliderG.TabIndex = 75;
+            this.SliderG.Text = "slider6";
+            this.SliderG.ValueHeight = 1;
+            this.SliderG.ValueWidth = 2;
+            this.SliderG.LValueChanged += new CustomSlider.Slider.LValueChangedEventHandler(this.SliderR_LValueChanged);
+            // 
+            // SliderR
+            // 
+            this.SliderR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.SliderR.ForeColor = System.Drawing.Color.White;
+            this.SliderR.L_AfterValue = null;
+            this.SliderR.L_BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.SliderR.L_BarSize = 20;
+            this.SliderR.L_BarWidthSize = 10;
+            this.SliderR.L_BeforeValue = "Red: ";
+            this.SliderR.L_Enable = true;
+            this.SliderR.L_IsFull = true;
+            this.SliderR.L_IsRound = false;
+            this.SliderR.L_LowBar = 0;
+            this.SliderR.L_Maximum = 255;
+            this.SliderR.L_Minimum = 0;
+            this.SliderR.L_Orientation = CustomSlider.Orientation.Horizontal_LR;
+            this.SliderR.L_SliderColor = System.Drawing.Color.RoyalBlue;
+            this.SliderR.L_Value = 0;
+            this.SliderR.L_ValuePos = CustomSlider.ValuePos.Left;
+            this.SliderR.L_ValueShow = true;
+            this.SliderR.Location = new System.Drawing.Point(28, 214);
+            this.SliderR.Name = "SliderR";
+            this.SliderR.PreWidth = 10F;
+            this.SliderR.RearWidth = 0F;
+            this.SliderR.Size = new System.Drawing.Size(206, 20);
+            this.SliderR.TabIndex = 74;
+            this.SliderR.Text = "slider6";
+            this.SliderR.ValueHeight = 1;
+            this.SliderR.ValueWidth = 2;
+            this.SliderR.LValueChanged += new CustomSlider.Slider.LValueChangedEventHandler(this.SliderR_LValueChanged);
+            // 
+            // toggleCheckbox4
+            // 
+            this.toggleCheckbox4.Checked = true;
+            this.toggleCheckbox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toggleCheckbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.toggleCheckbox4.Location = new System.Drawing.Point(189, 83);
+            this.toggleCheckbox4.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleCheckbox4.Name = "toggleCheckbox4";
+            this.toggleCheckbox4.OffBackcolor = System.Drawing.Color.Gray;
+            this.toggleCheckbox4.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleCheckbox4.OnBackColor = System.Drawing.Color.RoyalBlue;
+            this.toggleCheckbox4.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleCheckbox4.Size = new System.Drawing.Size(45, 22);
+            this.toggleCheckbox4.TabIndex = 72;
+            this.toggleCheckbox4.Text = "toggleCheckbox6";
+            this.toggleCheckbox4.UseVisualStyleBackColor = true;
+            this.toggleCheckbox4.CheckedChanged += new System.EventHandler(this.toggleCheckbox4_CheckedChanged_1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(23, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 25);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "ESP Enable";
+            // 
+            // ESPColorCombo
+            // 
+            this.ESPColorCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.ESPColorCombo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ESPColorCombo.FormattingEnabled = true;
+            this.ESPColorCombo.Items.AddRange(new object[] {
+            "Fov",
+            "ESP(Visible)",
+            "ESP(InVisible)",
+            "String"});
+            this.ESPColorCombo.Location = new System.Drawing.Point(28, 176);
+            this.ESPColorCombo.Name = "ESPColorCombo";
+            this.ESPColorCombo.Size = new System.Drawing.Size(206, 30);
+            this.ESPColorCombo.TabIndex = 70;
+            this.ESPColorCombo.SelectedIndexChanged += new System.EventHandler(this.crownComboBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(5, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 30);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Color";
+            // 
+            // toggleCheckbox2
+            // 
+            this.toggleCheckbox2.Checked = true;
+            this.toggleCheckbox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toggleCheckbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.toggleCheckbox2.Location = new System.Drawing.Point(189, 48);
+            this.toggleCheckbox2.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleCheckbox2.Name = "toggleCheckbox2";
+            this.toggleCheckbox2.OffBackcolor = System.Drawing.Color.Gray;
+            this.toggleCheckbox2.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleCheckbox2.OnBackColor = System.Drawing.Color.RoyalBlue;
+            this.toggleCheckbox2.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleCheckbox2.Size = new System.Drawing.Size(45, 22);
+            this.toggleCheckbox2.TabIndex = 68;
+            this.toggleCheckbox2.Text = "toggleCheckbox6";
+            this.toggleCheckbox2.UseVisualStyleBackColor = true;
+            this.toggleCheckbox2.CheckedChanged += new System.EventHandler(this.toggleCheckbox2_CheckedChanged_1);
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(401, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 25);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "200m";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(268, 47);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(127, 25);
+            this.label12.TabIndex = 53;
+            this.label12.Text = "Max Distance";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(23, 47);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 25);
+            this.label13.TabIndex = 52;
+            this.label13.Text = "FOV Enable";
+            // 
+            // slider3
+            // 
+            this.slider3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slider3.ForeColor = System.Drawing.Color.White;
+            this.slider3.L_AfterValue = null;
+            this.slider3.L_BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.slider3.L_BarSize = 20;
+            this.slider3.L_BarWidthSize = 10;
+            this.slider3.L_BeforeValue = null;
+            this.slider3.L_Enable = true;
+            this.slider3.L_IsFull = true;
+            this.slider3.L_IsRound = true;
+            this.slider3.L_LowBar = 1;
+            this.slider3.L_Maximum = 1000;
+            this.slider3.L_Minimum = 1;
+            this.slider3.L_Orientation = CustomSlider.Orientation.Horizontal_LR;
+            this.slider3.L_SliderColor = System.Drawing.Color.RoyalBlue;
+            this.slider3.L_Value = 200;
+            this.slider3.L_ValuePos = CustomSlider.ValuePos.Center;
+            this.slider3.L_ValueShow = false;
+            this.slider3.Location = new System.Drawing.Point(273, 78);
+            this.slider3.Name = "slider3";
+            this.slider3.PreWidth = 0F;
+            this.slider3.RearWidth = 0F;
+            this.slider3.Size = new System.Drawing.Size(215, 20);
+            this.slider3.TabIndex = 51;
+            this.slider3.Text = "slider6";
+            this.slider3.ValueHeight = 0;
+            this.slider3.ValueWidth = 0;
+            this.slider3.LValueChanged += new CustomSlider.Slider.LValueChangedEventHandler(this.slider3_LValueChanged_1);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(5, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 30);
+            this.label14.TabIndex = 50;
+            this.label14.Text = "ESP";
             // 
             // ABPanel
             // 
@@ -165,48 +580,8 @@
             this.ABPanel.Name = "ABPanel";
             this.ABPanel.Size = new System.Drawing.Size(508, 289);
             this.ABPanel.TabIndex = 74;
-            // 
-            // ellipseButoon4
-            // 
-            this.ellipseButoon4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ellipseButoon4.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButoon4.DisplayBorder = true;
-            this.ellipseButoon4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ellipseButoon4.ForeColor = System.Drawing.Color.White;
-            this.ellipseButoon4.Location = new System.Drawing.Point(140, 78);
-            this.ellipseButoon4.Name = "ellipseButoon4";
-            this.ellipseButoon4.Radius = 15;
-            this.ellipseButoon4.Size = new System.Drawing.Size(94, 30);
-            this.ellipseButoon4.TabIndex = 73;
-            this.ellipseButoon4.Text = "xButton1";
-            // 
-            // ellipseButoon5
-            // 
-            this.ellipseButoon5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ellipseButoon5.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButoon5.DisplayBorder = true;
-            this.ellipseButoon5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.ellipseButoon5.ForeColor = System.Drawing.Color.White;
-            this.ellipseButoon5.Location = new System.Drawing.Point(140, 161);
-            this.ellipseButoon5.Name = "ellipseButoon5";
-            this.ellipseButoon5.Radius = 15;
-            this.ellipseButoon5.Size = new System.Drawing.Size(94, 30);
-            this.ellipseButoon5.TabIndex = 72;
-            this.ellipseButoon5.Text = "XButton4";
-            // 
-            // ellipseButoon6
-            // 
-            this.ellipseButoon6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ellipseButoon6.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButoon6.DisplayBorder = true;
-            this.ellipseButoon6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.ellipseButoon6.ForeColor = System.Drawing.Color.White;
-            this.ellipseButoon6.Location = new System.Drawing.Point(140, 249);
-            this.ellipseButoon6.Name = "ellipseButoon6";
-            this.ellipseButoon6.Radius = 15;
-            this.ellipseButoon6.Size = new System.Drawing.Size(94, 30);
-            this.ellipseButoon6.TabIndex = 71;
-            this.ellipseButoon6.Text = "XButton4";
+            this.ABPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.ABPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             // 
             // toggleCheckbox5
             // 
@@ -520,6 +895,106 @@
             this.label28.TabIndex = 50;
             this.label28.Text = "AimBot";
             // 
+            // LicensePanel
+            // 
+            this.LicensePanel.Controls.Add(this.toggleCheckbox3);
+            this.LicensePanel.Controls.Add(this.label1);
+            this.LicensePanel.Controls.Add(this.label20);
+            this.LicensePanel.Location = new System.Drawing.Point(0, 0);
+            this.LicensePanel.Name = "LicensePanel";
+            this.LicensePanel.Size = new System.Drawing.Size(508, 289);
+            this.LicensePanel.TabIndex = 78;
+            this.LicensePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.LicensePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            // 
+            // toggleCheckbox3
+            // 
+            this.toggleCheckbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.toggleCheckbox3.Location = new System.Drawing.Point(189, 48);
+            this.toggleCheckbox3.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleCheckbox3.Name = "toggleCheckbox3";
+            this.toggleCheckbox3.OffBackcolor = System.Drawing.Color.Gray;
+            this.toggleCheckbox3.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleCheckbox3.OnBackColor = System.Drawing.Color.RoyalBlue;
+            this.toggleCheckbox3.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleCheckbox3.Size = new System.Drawing.Size(45, 22);
+            this.toggleCheckbox3.TabIndex = 68;
+            this.toggleCheckbox3.Text = "toggleCheckbox6";
+            this.toggleCheckbox3.UseVisualStyleBackColor = true;
+            this.toggleCheckbox3.CheckedChanged += new System.EventHandler(this.toggleCheckbox3_CheckedChanged_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "NaniNaniEnable";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(5, 3);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 30);
+            this.label20.TabIndex = 50;
+            this.label20.Text = "License";
+            // 
+            // ScanPanel
+            // 
+            this.ScanPanel.Controls.Add(this.toggleCheckbox1);
+            this.ScanPanel.Controls.Add(this.label3);
+            this.ScanPanel.Controls.Add(this.label4);
+            this.ScanPanel.Location = new System.Drawing.Point(0, 0);
+            this.ScanPanel.Name = "ScanPanel";
+            this.ScanPanel.Size = new System.Drawing.Size(508, 289);
+            this.ScanPanel.TabIndex = 77;
+            this.ScanPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.ScanPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            // 
+            // toggleCheckbox1
+            // 
+            this.toggleCheckbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.toggleCheckbox1.Location = new System.Drawing.Point(189, 48);
+            this.toggleCheckbox1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleCheckbox1.Name = "toggleCheckbox1";
+            this.toggleCheckbox1.OffBackcolor = System.Drawing.Color.Gray;
+            this.toggleCheckbox1.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleCheckbox1.OnBackColor = System.Drawing.Color.RoyalBlue;
+            this.toggleCheckbox1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleCheckbox1.Size = new System.Drawing.Size(45, 22);
+            this.toggleCheckbox1.TabIndex = 68;
+            this.toggleCheckbox1.Text = "toggleCheckbox6";
+            this.toggleCheckbox1.UseVisualStyleBackColor = true;
+            this.toggleCheckbox1.CheckedChanged += new System.EventHandler(this.toggleCheckbox1_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(23, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 25);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "NaniNaniEnable";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(5, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 30);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Setting";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(20)))));
@@ -545,7 +1020,7 @@
             this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.LicenseBtn);
             this.panel4.Controls.Add(this.panel9);
-            this.panel4.Controls.Add(this.SettingBtn);
+            this.panel4.Controls.Add(this.ScanBtn);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.ESPBtn);
             this.panel4.Controls.Add(this.panel7);
@@ -597,29 +1072,29 @@
             this.panel9.Size = new System.Drawing.Size(75, 12);
             this.panel9.TabIndex = 8;
             // 
-            // SettingBtn
+            // ScanBtn
             // 
-            this.SettingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SettingBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SettingBtn.FlatAppearance.BorderSize = 0;
-            this.SettingBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.SettingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.SettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingBtn.ForeColor = System.Drawing.Color.White;
-            this.SettingBtn.Image = ((System.Drawing.Image)(resources.GetObject("SettingBtn.Image")));
-            this.SettingBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SettingBtn.Location = new System.Drawing.Point(0, 175);
-            this.SettingBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.SettingBtn.Name = "SettingBtn";
-            this.SettingBtn.Size = new System.Drawing.Size(75, 65);
-            this.SettingBtn.TabIndex = 4;
-            this.SettingBtn.TabStop = false;
-            this.SettingBtn.Text = "Setting";
-            this.SettingBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.SettingBtn.UseVisualStyleBackColor = true;
-            this.SettingBtn.Click += new System.EventHandler(this.button1_Click);
-            this.SettingBtn.Enter += new System.EventHandler(this.button1_Enter);
+            this.ScanBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ScanBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ScanBtn.FlatAppearance.BorderSize = 0;
+            this.ScanBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.ScanBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.ScanBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ScanBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScanBtn.ForeColor = System.Drawing.Color.White;
+            this.ScanBtn.Image = global::HalolckUI.Properties.Resources.cog_w;
+            this.ScanBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ScanBtn.Location = new System.Drawing.Point(0, 175);
+            this.ScanBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.ScanBtn.Name = "ScanBtn";
+            this.ScanBtn.Size = new System.Drawing.Size(75, 65);
+            this.ScanBtn.TabIndex = 4;
+            this.ScanBtn.TabStop = false;
+            this.ScanBtn.Text = "Setting";
+            this.ScanBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ScanBtn.UseVisualStyleBackColor = true;
+            this.ScanBtn.Click += new System.EventHandler(this.button1_Click);
+            this.ScanBtn.Enter += new System.EventHandler(this.button1_Enter);
             // 
             // panel8
             // 
@@ -702,211 +1177,74 @@
             this.panel6.Size = new System.Drawing.Size(10, 357);
             this.panel6.TabIndex = 3;
             // 
-            // ESPPanel
+            // timer1
             // 
-            this.ESPPanel.Controls.Add(this.toggleCheckbox2);
-            this.ESPPanel.Controls.Add(this.label11);
-            this.ESPPanel.Controls.Add(this.label12);
-            this.ESPPanel.Controls.Add(this.label13);
-            this.ESPPanel.Controls.Add(this.slider3);
-            this.ESPPanel.Controls.Add(this.label14);
-            this.ESPPanel.Location = new System.Drawing.Point(0, 0);
-            this.ESPPanel.Name = "ESPPanel";
-            this.ESPPanel.Size = new System.Drawing.Size(508, 289);
-            this.ESPPanel.TabIndex = 76;
-            this.ESPPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
-            this.ESPPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // toggleCheckbox2
+            // LineChb
             // 
-            this.toggleCheckbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.toggleCheckbox2.Location = new System.Drawing.Point(189, 48);
-            this.toggleCheckbox2.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleCheckbox2.Name = "toggleCheckbox2";
-            this.toggleCheckbox2.OffBackcolor = System.Drawing.Color.Gray;
-            this.toggleCheckbox2.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleCheckbox2.OnBackColor = System.Drawing.Color.RoyalBlue;
-            this.toggleCheckbox2.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleCheckbox2.Size = new System.Drawing.Size(45, 22);
-            this.toggleCheckbox2.TabIndex = 68;
-            this.toggleCheckbox2.Text = "toggleCheckbox6";
-            this.toggleCheckbox2.UseVisualStyleBackColor = true;
-            this.toggleCheckbox2.CheckedChanged += new System.EventHandler(this.toggleCheckbox2_CheckedChanged_1);
+            this.LineChb.AutoSize = true;
+            this.LineChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.LineChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LineChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.LineChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.LineChb.Enable = true;
+            this.LineChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.LineChb.EnabledStringColor = System.Drawing.Color.White;
+            this.LineChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.LineChb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.LineChb.ForeColor = System.Drawing.Color.White;
+            this.LineChb.Location = new System.Drawing.Point(375, 200);
+            this.LineChb.Name = "LineChb";
+            this.LineChb.Size = new System.Drawing.Size(64, 20);
+            this.LineChb.TabIndex = 89;
+            this.LineChb.Text = "Line";
+            this.LineChb.UseVisualStyleBackColor = true;
+            this.LineChb.CheckedChanged += new System.EventHandler(this.LineChb_CheckedChanged);
             // 
-            // label11
+            // ellipseButoon4
             // 
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(401, 47);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 25);
-            this.label11.TabIndex = 54;
-            this.label11.Text = "7";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.ellipseButoon4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ellipseButoon4.BorderColor = System.Drawing.Color.Transparent;
+            this.ellipseButoon4.DisplayBorder = true;
+            this.ellipseButoon4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ellipseButoon4.ForeColor = System.Drawing.Color.White;
+            this.ellipseButoon4.Location = new System.Drawing.Point(140, 78);
+            this.ellipseButoon4.Name = "ellipseButoon4";
+            this.ellipseButoon4.Radius = 15;
+            this.ellipseButoon4.Size = new System.Drawing.Size(94, 30);
+            this.ellipseButoon4.TabIndex = 73;
+            this.ellipseButoon4.Text = "xButton1";
             // 
-            // label12
+            // ellipseButoon5
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(268, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 25);
-            this.label12.TabIndex = 53;
-            this.label12.Text = "Max Distance";
+            this.ellipseButoon5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ellipseButoon5.BorderColor = System.Drawing.Color.Transparent;
+            this.ellipseButoon5.DisplayBorder = true;
+            this.ellipseButoon5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ellipseButoon5.ForeColor = System.Drawing.Color.White;
+            this.ellipseButoon5.Location = new System.Drawing.Point(140, 161);
+            this.ellipseButoon5.Name = "ellipseButoon5";
+            this.ellipseButoon5.Radius = 15;
+            this.ellipseButoon5.Size = new System.Drawing.Size(94, 30);
+            this.ellipseButoon5.TabIndex = 72;
+            this.ellipseButoon5.Text = "XButton4";
             // 
-            // label13
+            // ellipseButoon6
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(23, 47);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 25);
-            this.label13.TabIndex = 52;
-            this.label13.Text = "FOVEnable";
-            // 
-            // slider3
-            // 
-            this.slider3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.slider3.ForeColor = System.Drawing.Color.White;
-            this.slider3.L_AfterValue = null;
-            this.slider3.L_BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.slider3.L_BarSize = 20;
-            this.slider3.L_BarWidthSize = 10;
-            this.slider3.L_BeforeValue = null;
-            this.slider3.L_Enable = true;
-            this.slider3.L_IsFull = true;
-            this.slider3.L_IsRound = true;
-            this.slider3.L_LowBar = 1;
-            this.slider3.L_Maximum = 1000;
-            this.slider3.L_Minimum = 1;
-            this.slider3.L_Orientation = CustomSlider.Orientation.Horizontal_LR;
-            this.slider3.L_SliderColor = System.Drawing.Color.RoyalBlue;
-            this.slider3.L_Value = 7;
-            this.slider3.L_ValuePos = CustomSlider.ValuePos.Center;
-            this.slider3.L_ValueShow = false;
-            this.slider3.Location = new System.Drawing.Point(273, 78);
-            this.slider3.Name = "slider3";
-            this.slider3.PreWidth = 0F;
-            this.slider3.RearWidth = 0F;
-            this.slider3.Size = new System.Drawing.Size(215, 20);
-            this.slider3.TabIndex = 51;
-            this.slider3.Text = "slider6";
-            this.slider3.ValueHeight = 0;
-            this.slider3.ValueWidth = 0;
-            this.slider3.LValueChanged += new CustomSlider.Slider.LValueChangedEventHandler(this.slider3_LValueChanged_1);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(5, 3);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 30);
-            this.label14.TabIndex = 50;
-            this.label14.Text = "ESP";
-            // 
-            // SettingPanel
-            // 
-            this.SettingPanel.Controls.Add(this.toggleCheckbox1);
-            this.SettingPanel.Controls.Add(this.label3);
-            this.SettingPanel.Controls.Add(this.label4);
-            this.SettingPanel.Location = new System.Drawing.Point(0, 0);
-            this.SettingPanel.Name = "SettingPanel";
-            this.SettingPanel.Size = new System.Drawing.Size(508, 289);
-            this.SettingPanel.TabIndex = 77;
-            this.SettingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
-            this.SettingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
-            // 
-            // toggleCheckbox1
-            // 
-            this.toggleCheckbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.toggleCheckbox1.Location = new System.Drawing.Point(189, 48);
-            this.toggleCheckbox1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleCheckbox1.Name = "toggleCheckbox1";
-            this.toggleCheckbox1.OffBackcolor = System.Drawing.Color.Gray;
-            this.toggleCheckbox1.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleCheckbox1.OnBackColor = System.Drawing.Color.RoyalBlue;
-            this.toggleCheckbox1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleCheckbox1.Size = new System.Drawing.Size(45, 22);
-            this.toggleCheckbox1.TabIndex = 68;
-            this.toggleCheckbox1.Text = "toggleCheckbox6";
-            this.toggleCheckbox1.UseVisualStyleBackColor = true;
-            this.toggleCheckbox1.CheckedChanged += new System.EventHandler(this.toggleCheckbox1_CheckedChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(23, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 25);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "NaniNaniEnable";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(5, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 30);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Setting";
-            // 
-            // LicensePanel
-            // 
-            this.LicensePanel.Controls.Add(this.toggleCheckbox3);
-            this.LicensePanel.Controls.Add(this.label1);
-            this.LicensePanel.Controls.Add(this.label20);
-            this.LicensePanel.Location = new System.Drawing.Point(0, 0);
-            this.LicensePanel.Name = "LicensePanel";
-            this.LicensePanel.Size = new System.Drawing.Size(508, 289);
-            this.LicensePanel.TabIndex = 78;
-            this.LicensePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
-            this.LicensePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
-            // 
-            // toggleCheckbox3
-            // 
-            this.toggleCheckbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.toggleCheckbox3.Location = new System.Drawing.Point(189, 48);
-            this.toggleCheckbox3.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleCheckbox3.Name = "toggleCheckbox3";
-            this.toggleCheckbox3.OffBackcolor = System.Drawing.Color.Gray;
-            this.toggleCheckbox3.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleCheckbox3.OnBackColor = System.Drawing.Color.RoyalBlue;
-            this.toggleCheckbox3.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleCheckbox3.Size = new System.Drawing.Size(45, 22);
-            this.toggleCheckbox3.TabIndex = 68;
-            this.toggleCheckbox3.Text = "toggleCheckbox6";
-            this.toggleCheckbox3.UseVisualStyleBackColor = true;
-            this.toggleCheckbox3.CheckedChanged += new System.EventHandler(this.toggleCheckbox3_CheckedChanged_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 25);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "NaniNaniEnable";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(5, 3);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 30);
-            this.label20.TabIndex = 50;
-            this.label20.Text = "License";
+            this.ellipseButoon6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ellipseButoon6.BorderColor = System.Drawing.Color.Transparent;
+            this.ellipseButoon6.DisplayBorder = true;
+            this.ellipseButoon6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ellipseButoon6.ForeColor = System.Drawing.Color.White;
+            this.ellipseButoon6.Location = new System.Drawing.Point(140, 249);
+            this.ellipseButoon6.Name = "ellipseButoon6";
+            this.ellipseButoon6.Radius = 15;
+            this.ellipseButoon6.Size = new System.Drawing.Size(94, 30);
+            this.ellipseButoon6.TabIndex = 71;
+            this.ellipseButoon6.Text = "XButton4";
             // 
             // Form1
             // 
@@ -926,15 +1264,16 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            this.ABPanel.ResumeLayout(false);
-            this.ABPanel.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.ESPPanel.ResumeLayout(false);
             this.ESPPanel.PerformLayout();
-            this.SettingPanel.ResumeLayout(false);
-            this.SettingPanel.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.ABPanel.ResumeLayout(false);
+            this.ABPanel.PerformLayout();
             this.LicensePanel.ResumeLayout(false);
             this.LicensePanel.PerformLayout();
+            this.ScanPanel.ResumeLayout(false);
+            this.ScanPanel.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -947,7 +1286,7 @@
         private System.Windows.Forms.Button AimBotBtn;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button SettingBtn;
+        private System.Windows.Forms.Button ScanBtn;
         private System.Windows.Forms.Button ESPBtn;
         private System.Windows.Forms.Button LicenseBtn;
         private System.Windows.Forms.Panel panel9;
@@ -993,10 +1332,27 @@
         private CustomControls.ToggleCheckbox toggleCheckbox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Panel SettingPanel;
+        private System.Windows.Forms.Panel ScanPanel;
         private CustomControls.ToggleCheckbox toggleCheckbox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
+        private ReaLTaiizor.Controls.CrownComboBox ESPColorCombo;
+        private CustomControls.ToggleCheckbox toggleCheckbox4;
+        private System.Windows.Forms.Label label5;
+        private CustomSlider.Slider SliderR;
+        private CustomSlider.Slider SliderB;
+        private CustomSlider.Slider SliderG;
+        private System.Windows.Forms.Panel ColorPanel;
+        private ReaLTaiizor.Controls.HopeCheckBox NAMEChb;
+        private ReaLTaiizor.Controls.HopeCheckBox ESPBOXChb;
+        private ReaLTaiizor.Controls.HopeCheckBox HPChb;
+        private System.Windows.Forms.Label label6;
+        private ReaLTaiizor.Controls.HopeCheckBox DISTANCEChb;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label colorstrlbl;
+        private ReaLTaiizor.Controls.HopeCheckBox LineChb;
     }
 }
 

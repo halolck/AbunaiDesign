@@ -52,6 +52,7 @@ namespace HalolckUI
             if (e.KeyCode == Keys.Home)
             {
                 f_Overlay.ShowEnable = !f_Overlay.ShowEnable;
+                this.Visible = f_Overlay.ShowEnable;
             }
             Console.WriteLine(e.KeyCode);
         }
@@ -99,12 +100,13 @@ namespace HalolckUI
             AimBotBtn.Image = Properties.Resources.target_b;
             AimBotBtn.ForeColor = Color.RoyalBlue;
             ESPBtn.ForeColor = Color.White;
-            SettingBtn.ForeColor = Color.White;
+            ScanBtn.ForeColor = Color.White;
             LicenseBtn.ForeColor = Color.White;
 
             ABSValLbl.Text = ABSSlider.L_Value.ToString();
             FBSBalLbl.Text = FBSSlider.L_Value.ToString();
-            FOVValLbl.Text = ((float)FOVSlider.L_Value / 10).ToString("F1");
+            FOVValLbl.Text = ((float)FOVSlider.L_Value / 10 + 0.9).ToString("F1");
+
 
 
             if (ABToggle.Checked)
@@ -189,19 +191,27 @@ namespace HalolckUI
             }
 
             f_Overlay.ShowFov = toggleCheckbox2.Checked;
+            f_Overlay.ESPEnable = toggleCheckbox4.Checked;
+            f_Overlay.DistanceMax = slider3.L_Value;
 
+            ESPBOXChb.Checked = f_Overlay.ESPBOXEnable;
+            LineChb.Checked = f_Overlay.LineEnable;
+            HPChb.Checked = f_Overlay.HealthEnable;
+            NAMEChb.Checked = f_Overlay.NameEnable;
+            DISTANCEChb.Checked = f_Overlay.DistanceEnable;
 
             ABPanel.Visible = true;
             ESPPanel.Visible = false;
-            SettingPanel.Visible = false;
+            ScanPanel.Visible = false;
             LicensePanel.Visible = false;
+            ESPColorCombo.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             AimBotBtn.ForeColor = Color.White;
             ESPBtn.ForeColor = Color.White;
-            SettingBtn.ForeColor = Color.White;
+            ScanBtn.ForeColor = Color.White;
             LicenseBtn.ForeColor = Color.White;
             ((Button)sender).ForeColor = Color.RoyalBlue;
             ButtonCheck(sender);
@@ -210,7 +220,7 @@ namespace HalolckUI
         {
             AimBotBtn.Image = ((Button)sender).Text == "AimBot" ? Properties.Resources.target_b: Properties.Resources.target_w;
             ESPBtn.Image = ((Button)sender).Text == "ESP" ? Properties.Resources.eye_b : Properties.Resources.eye_w;
-            SettingBtn.Image = ((Button)sender).Text == "Setting" ? Properties.Resources.cog_b : Properties.Resources.cog_w;
+            ScanBtn.Image = ((Button)sender).Text == "Setting" ? Properties.Resources.cog_b : Properties.Resources.cog_w;
             LicenseBtn.Image = ((Button)sender).Text == "License" ? Properties.Resources.account_b : Properties.Resources.account_w;
 
             //panelchange
@@ -235,12 +245,12 @@ namespace HalolckUI
         {
             AimBotBtn.Image = Properties.Resources.target_b;
             ESPBtn.Image = Properties.Resources.eye_w;
-            SettingBtn.Image = Properties.Resources.cog_w;
+            ScanBtn.Image = Properties.Resources.cog_w;
             LicenseBtn.Image = Properties.Resources.account_w;
 
             ABPanel.Visible = true;
             ESPPanel.Visible = false;
-            SettingPanel.Visible = false;
+            ScanPanel.Visible = false;
             LicensePanel.Visible = false;
         }
 
@@ -248,11 +258,11 @@ namespace HalolckUI
         {
             AimBotBtn.Image = Properties.Resources.target_w;
             ESPBtn.Image = Properties.Resources.eye_b;
-            SettingBtn.Image = Properties.Resources.cog_w;
+            ScanBtn.Image = Properties.Resources.cog_w;
             LicenseBtn.Image = Properties.Resources.account_w;
             ABPanel.Visible = false;
             ESPPanel.Visible = true;
-            SettingPanel.Visible = false;
+            ScanPanel.Visible = false;
             LicensePanel.Visible = false;
         }
 
@@ -260,11 +270,11 @@ namespace HalolckUI
         {
             AimBotBtn.Image = Properties.Resources.target_w;
             ESPBtn.Image = Properties.Resources.eye_w;
-            SettingBtn.Image = Properties.Resources.cog_b;
+            ScanBtn.Image = Properties.Resources.cog_b;
             LicenseBtn.Image = Properties.Resources.account_w;
             ABPanel.Visible = false;
             ESPPanel.Visible = false;
-            SettingPanel.Visible = true;
+            ScanPanel.Visible = true;
             LicensePanel.Visible = false;
         }
 
@@ -272,11 +282,11 @@ namespace HalolckUI
         {
             AimBotBtn.Image = Properties.Resources.target_w;
             ESPBtn.Image = Properties.Resources.eye_w;
-            SettingBtn.Image = Properties.Resources.cog_w;
+            ScanBtn.Image = Properties.Resources.cog_w;
             LicenseBtn.Image = Properties.Resources.account_b;
             ABPanel.Visible = false;
             ESPPanel.Visible = false;
-            SettingPanel.Visible = false;
+            ScanPanel.Visible = false;
             LicensePanel.Visible = true;
         }
 
@@ -424,6 +434,7 @@ namespace HalolckUI
         private void slider3_LValueChanged_1(object sender, CustomSlider.LEventArgs e)
         {
             label11.Text = slider3.L_Value.ToString()+"m";
+            f_Overlay.DistanceMax = slider3.L_Value;
         }
 
         private void toggleCheckbox3_CheckedChanged_1(object sender, EventArgs e)
@@ -461,6 +472,102 @@ namespace HalolckUI
                 label13.ForeColor = Color.Gray;
             }
             f_Overlay.ShowFov = toggleCheckbox2.Checked;
+        }
+        Random rd1m = new Random();
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            this.Text = GeneratePassword(rd1m.Next(9, 15));
+        }
+
+
+
+        private void SliderR_LValueChanged(object sender, CustomSlider.LEventArgs e)
+        {
+            switch (ESPColorCombo.SelectedIndex)
+            {
+                case 0:
+                    f_Overlay.FovPen = new Pen(Color.FromArgb(255, SliderR.L_Value, SliderG.L_Value, SliderB.L_Value));
+                    break;
+                case 1:
+                    f_Overlay.ESPVisPen = new Pen(Color.FromArgb(255, SliderR.L_Value, SliderG.L_Value, SliderB.L_Value));
+                    break;
+                case 2:
+                    f_Overlay.ESPINVisPen = new Pen(Color.FromArgb(255, SliderR.L_Value, SliderG.L_Value, SliderB.L_Value));
+                    break;
+                case 3:
+                    f_Overlay.StringPen = new Pen(Color.FromArgb(255, SliderR.L_Value, SliderG.L_Value, SliderB.L_Value));
+                    break;
+            }
+            ColorPanel.BackColor = Color.FromArgb(255, SliderR.L_Value, SliderG.L_Value, SliderB.L_Value);
+            colorstrlbl.Text ="#"+ SliderR.L_Value.ToString("x2") + SliderG.L_Value.ToString("x2") + SliderB.L_Value.ToString("x2");
+
+        }
+
+        private void crownComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (ESPColorCombo.SelectedIndex)
+            {
+                case 0:
+                    Color tempcol = Color.FromArgb (255, f_Overlay.FovPen.Color.R, f_Overlay.FovPen.Color.G, f_Overlay.FovPen.Color.B);
+                    SliderR.L_Value = tempcol.R;
+                    SliderG.L_Value = tempcol.G;
+                    SliderB.L_Value = tempcol.B;
+                    ColorPanel.BackColor = tempcol;
+                    break;
+                case 1:
+                    Color tempcol1 = Color.FromArgb(255, f_Overlay.ESPVisPen.Color.R, f_Overlay.ESPVisPen.Color.G, f_Overlay.ESPVisPen.Color.B);
+                    SliderR.L_Value = tempcol1.R;
+                    SliderG.L_Value = tempcol1.G;
+                    SliderB.L_Value = tempcol1.B;
+                    ColorPanel.BackColor = tempcol1;
+                    break;
+                case 2:
+                    Color tempcol2 = Color.FromArgb(255, f_Overlay.ESPINVisPen.Color.R, f_Overlay.ESPINVisPen.Color.G, f_Overlay.ESPINVisPen.Color.B);
+                    SliderR.L_Value = tempcol2.R;
+                    SliderG.L_Value = tempcol2.G;
+                    SliderB.L_Value = tempcol2.B;
+                    ColorPanel.BackColor = tempcol2;
+                    break;
+                case 3:
+                    Color tempcol3 = Color.FromArgb(255, f_Overlay.StringPen.Color.R, f_Overlay.StringPen.Color.G, f_Overlay.StringPen.Color.B);
+                    SliderR.L_Value = tempcol3.R;
+                    SliderG.L_Value = tempcol3.G;
+                    SliderB.L_Value = tempcol3.B;
+                    ColorPanel.BackColor = tempcol3;
+                    break;
+            }
+        }
+
+
+        private void ESPBOXChb_CheckedChanged(object sender, EventArgs e)
+        {
+            f_Overlay.ESPBOXEnable = ESPBOXChb.Checked;
+        }
+
+        private void LineChb_CheckedChanged(object sender, EventArgs e)
+        {
+            f_Overlay.LineEnable = LineChb.Checked;
+        }
+
+        private void HPChb_CheckedChanged(object sender, EventArgs e)
+        {
+            f_Overlay.HealthEnable = HPChb.Checked;
+        }
+
+        private void NAMEChb_CheckedChanged(object sender, EventArgs e)
+        {
+            f_Overlay.NameEnable = NAMEChb.Checked;
+        }
+
+        private void DISTANCEChb_CheckedChanged(object sender, EventArgs e)
+        {
+            f_Overlay.DistanceEnable = DISTANCEChb.Checked;
+        }
+
+        private void toggleCheckbox4_CheckedChanged_1(object sender, EventArgs e)
+        {
+            f_Overlay.ESPEnable = toggleCheckbox4.Checked;
         }
     }
 }

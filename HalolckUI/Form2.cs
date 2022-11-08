@@ -33,30 +33,58 @@ namespace HalolckUI
         Bitmap canvas;
         Graphics g;
         Size windowsize;
-        string WINDOW_NAME = "jcpicker";
+        string WINDOW_NAME = "notepad";
         System.Diagnostics.Process[] ps;
         IntPtr intPtr;
         #region CProperet
         public bool AimbotEnable = false;
         public bool ShowFov = true;
+        public bool ESPEnable = true;
         public int Fov = 1;
         public bool ShowEnable = true;
+        public int DistanceMax = 1000;
+        //espchbbool
+        public bool ESPBOXEnable = true;
+        public bool LineEnable = false;
+        public bool HealthEnable = false;
+        public bool NameEnable = false;
+        public bool DistanceEnable = false;
+        //color(pen)
+        public Pen FovPen = new Pen(Color.Green);
+        public Pen ESPVisPen = new Pen(Color.Red);
+        public Pen ESPINVisPen = new Pen(Color.White);
+        public Pen StringPen = new Pen(Color.White);
+
         #endregion
         private void F_Overlay_Load(object sender, EventArgs e)
         {
-            ps = System.Diagnostics.Process.GetProcessesByName(WINDOW_NAME);
-            if (ps.Length == 0)
+            try
             {
-                MessageBox.Show($"指定プロセス\"{WINDOW_NAME}\"が存在しません。\r\n最初に\"{WINDOW_NAME}\"を起動してください。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
-                return;
-            }   
-            else if (ps.Length > 1)
-            {
-                MessageBox.Show($"指定プロセス\"{WINDOW_NAME}\"が複数存在します。\r\n最初に見つけた1つ({ps[0].MainWindowHandle.ToString()})にしかハックは適応されません。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            intPtr = ps[0].MainWindowHandle;
+                ps = System.Diagnostics.Process.GetProcessesByName(WINDOW_NAME);
+                if (ps.Length == 0)
+                {
+                    DialogResult result = MessageBox.Show($"指定プロセス\"{WINDOW_NAME}\"が存在しません。\r\n最初に\"{WINDOW_NAME}\"を起動してください。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (result == DialogResult.OK)
+                    {
+                        Application.Exit();
+                        return;
+                    }
 
+                }
+                else if (ps.Length != 1)
+                {
+                    MessageBox.Show($"指定プロセス\"{WINDOW_NAME}\"が複数存在します。\r\n1つ({ps[0].MainWindowHandle.ToString()})にしかハックは適応されません。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                intPtr = ps[0].MainWindowHandle;
+            }
+            catch
+            {
+                MessageBox.Show($"指定プロセス\"{WINDOW_NAME}\"へのアタッチ時にエラーが発生しました。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+            timer2.Start();
+            timer1.Start();
             windowsize = new Size(this.Width, this.Height);
             canvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             //ImageオブジェクトのGraphicsオブジェクトを作成する
@@ -66,6 +94,7 @@ namespace HalolckUI
             this.Size = new Size(w,h);
             Random rnd = new Random();
             this.Text = GeneratePassword(rnd.Next(12, 19));
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -76,8 +105,7 @@ namespace HalolckUI
             {
                 if (ShowFov)
                 {
-                    //(10, 20)-(100, 200)に、幅1の黒い線を引く
-                    g.DrawEllipse(Pens.Green, new RectangleF(windowsize.Width / 2 - Fov * 10 / 2, windowsize.Height / 2 - Fov * 10 / 2, Fov * 2 * 10 / 2, Fov * 2 * 10 / 2));
+                    g.DrawEllipse(FovPen, new RectangleF(windowsize.Width / 2 - Fov * 10 / 2, windowsize.Height / 2 - Fov * 10 / 2, Fov * 2 * 10 / 2, Fov * 2 * 10 / 2));
                 }
 
             }
