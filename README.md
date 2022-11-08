@@ -28,4 +28,4 @@ Alt+Tabに表示されないように変更
 
 (メモリをいじれるようにライブラリの追加[その辺の中身は書いてないよ(AssaultCubeあたりで例として記載予定)])
 
-https://cdn.discordapp.com/attachments/1033973059171930162/1039456742528008222/image.png
+![airplane](https://cdn.discordapp.com/attachments/1033973059171930162/1039456742528008222/image.png)
