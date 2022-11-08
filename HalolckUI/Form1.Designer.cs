@@ -34,13 +34,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.ESPPanel = new System.Windows.Forms.Panel();
+            this.HPChb = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.NAMEChb = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.LineChb = new ReaLTaiizor.Controls.HopeCheckBox();
+            this.DISTANCEChb = new ReaLTaiizor.Controls.HopeCheckBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.colorstrlbl = new System.Windows.Forms.Label();
             this.ESPBOXChb = new ReaLTaiizor.Controls.HopeCheckBox();
-            this.HPChb = new ReaLTaiizor.Controls.HopeCheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.DISTANCEChb = new ReaLTaiizor.Controls.HopeCheckBox();
-            this.NAMEChb = new ReaLTaiizor.Controls.HopeCheckBox();
             this.ColorPanel = new System.Windows.Forms.Panel();
             this.SliderB = new CustomSlider.Slider();
             this.SliderG = new CustomSlider.Slider();
@@ -56,6 +57,9 @@
             this.slider3 = new CustomSlider.Slider();
             this.label14 = new System.Windows.Forms.Label();
             this.ABPanel = new System.Windows.Forms.Panel();
+            this.ellipseButoon4 = new HalolckUI.EllipseButoon();
+            this.ellipseButoon5 = new HalolckUI.EllipseButoon();
+            this.ellipseButoon6 = new HalolckUI.EllipseButoon();
             this.toggleCheckbox5 = new CustomControls.ToggleCheckbox();
             this.label15 = new System.Windows.Forms.Label();
             this.ABToggle = new CustomControls.ToggleCheckbox();
@@ -99,10 +103,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.LineChb = new ReaLTaiizor.Controls.HopeCheckBox();
-            this.ellipseButoon4 = new HalolckUI.EllipseButoon();
-            this.ellipseButoon5 = new HalolckUI.EllipseButoon();
-            this.ellipseButoon6 = new HalolckUI.EllipseButoon();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -184,6 +184,90 @@
             this.ESPPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.ESPPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             // 
+            // HPChb
+            // 
+            this.HPChb.AutoSize = true;
+            this.HPChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.HPChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HPChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.HPChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.HPChb.Enable = true;
+            this.HPChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.HPChb.EnabledStringColor = System.Drawing.Color.White;
+            this.HPChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.HPChb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.HPChb.ForeColor = System.Drawing.Color.White;
+            this.HPChb.Location = new System.Drawing.Point(375, 226);
+            this.HPChb.Name = "HPChb";
+            this.HPChb.Size = new System.Drawing.Size(82, 20);
+            this.HPChb.TabIndex = 86;
+            this.HPChb.Text = "HP Bar";
+            this.HPChb.UseVisualStyleBackColor = true;
+            this.HPChb.CheckedChanged += new System.EventHandler(this.HPChb_CheckedChanged);
+            // 
+            // NAMEChb
+            // 
+            this.NAMEChb.AutoSize = true;
+            this.NAMEChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.NAMEChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NAMEChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.NAMEChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.NAMEChb.Enable = true;
+            this.NAMEChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.NAMEChb.EnabledStringColor = System.Drawing.Color.White;
+            this.NAMEChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.NAMEChb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.NAMEChb.ForeColor = System.Drawing.Color.White;
+            this.NAMEChb.Location = new System.Drawing.Point(375, 252);
+            this.NAMEChb.Name = "NAMEChb";
+            this.NAMEChb.Size = new System.Drawing.Size(77, 20);
+            this.NAMEChb.TabIndex = 83;
+            this.NAMEChb.Text = "Name";
+            this.NAMEChb.UseVisualStyleBackColor = true;
+            this.NAMEChb.CheckedChanged += new System.EventHandler(this.NAMEChb_CheckedChanged);
+            // 
+            // LineChb
+            // 
+            this.LineChb.AutoSize = true;
+            this.LineChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.LineChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LineChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.LineChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.LineChb.Enable = true;
+            this.LineChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.LineChb.EnabledStringColor = System.Drawing.Color.White;
+            this.LineChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.LineChb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.LineChb.ForeColor = System.Drawing.Color.White;
+            this.LineChb.Location = new System.Drawing.Point(375, 200);
+            this.LineChb.Name = "LineChb";
+            this.LineChb.Size = new System.Drawing.Size(64, 20);
+            this.LineChb.TabIndex = 89;
+            this.LineChb.Text = "Line";
+            this.LineChb.UseVisualStyleBackColor = true;
+            this.LineChb.CheckedChanged += new System.EventHandler(this.LineChb_CheckedChanged);
+            // 
+            // DISTANCEChb
+            // 
+            this.DISTANCEChb.AutoSize = true;
+            this.DISTANCEChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.DISTANCEChb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DISTANCEChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
+            this.DISTANCEChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
+            this.DISTANCEChb.Enable = true;
+            this.DISTANCEChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
+            this.DISTANCEChb.EnabledStringColor = System.Drawing.Color.White;
+            this.DISTANCEChb.EnabledUncheckedColor = System.Drawing.Color.White;
+            this.DISTANCEChb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DISTANCEChb.ForeColor = System.Drawing.Color.White;
+            this.DISTANCEChb.Location = new System.Drawing.Point(375, 278);
+            this.DISTANCEChb.Name = "DISTANCEChb";
+            this.DISTANCEChb.Size = new System.Drawing.Size(94, 20);
+            this.DISTANCEChb.TabIndex = 84;
+            this.DISTANCEChb.Text = "Distance";
+            this.DISTANCEChb.UseVisualStyleBackColor = true;
+            this.DISTANCEChb.CheckedChanged += new System.EventHandler(this.DISTANCEChb_CheckedChanged);
+            // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -226,27 +310,6 @@
             this.ESPBOXChb.UseVisualStyleBackColor = true;
             this.ESPBOXChb.CheckedChanged += new System.EventHandler(this.ESPBOXChb_CheckedChanged);
             // 
-            // HPChb
-            // 
-            this.HPChb.AutoSize = true;
-            this.HPChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.HPChb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HPChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
-            this.HPChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
-            this.HPChb.Enable = true;
-            this.HPChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
-            this.HPChb.EnabledStringColor = System.Drawing.Color.White;
-            this.HPChb.EnabledUncheckedColor = System.Drawing.Color.White;
-            this.HPChb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.HPChb.ForeColor = System.Drawing.Color.White;
-            this.HPChb.Location = new System.Drawing.Point(375, 226);
-            this.HPChb.Name = "HPChb";
-            this.HPChb.Size = new System.Drawing.Size(82, 20);
-            this.HPChb.TabIndex = 86;
-            this.HPChb.Text = "HP Bar";
-            this.HPChb.UseVisualStyleBackColor = true;
-            this.HPChb.CheckedChanged += new System.EventHandler(this.HPChb_CheckedChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -257,48 +320,6 @@
             this.label6.Size = new System.Drawing.Size(58, 30);
             this.label6.TabIndex = 85;
             this.label6.Text = "Misc";
-            // 
-            // DISTANCEChb
-            // 
-            this.DISTANCEChb.AutoSize = true;
-            this.DISTANCEChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.DISTANCEChb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DISTANCEChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
-            this.DISTANCEChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
-            this.DISTANCEChb.Enable = true;
-            this.DISTANCEChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
-            this.DISTANCEChb.EnabledStringColor = System.Drawing.Color.White;
-            this.DISTANCEChb.EnabledUncheckedColor = System.Drawing.Color.White;
-            this.DISTANCEChb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.DISTANCEChb.ForeColor = System.Drawing.Color.White;
-            this.DISTANCEChb.Location = new System.Drawing.Point(375, 278);
-            this.DISTANCEChb.Name = "DISTANCEChb";
-            this.DISTANCEChb.Size = new System.Drawing.Size(94, 20);
-            this.DISTANCEChb.TabIndex = 84;
-            this.DISTANCEChb.Text = "Distance";
-            this.DISTANCEChb.UseVisualStyleBackColor = true;
-            this.DISTANCEChb.CheckedChanged += new System.EventHandler(this.DISTANCEChb_CheckedChanged);
-            // 
-            // NAMEChb
-            // 
-            this.NAMEChb.AutoSize = true;
-            this.NAMEChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.NAMEChb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NAMEChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
-            this.NAMEChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
-            this.NAMEChb.Enable = true;
-            this.NAMEChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
-            this.NAMEChb.EnabledStringColor = System.Drawing.Color.White;
-            this.NAMEChb.EnabledUncheckedColor = System.Drawing.Color.White;
-            this.NAMEChb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.NAMEChb.ForeColor = System.Drawing.Color.White;
-            this.NAMEChb.Location = new System.Drawing.Point(375, 252);
-            this.NAMEChb.Name = "NAMEChb";
-            this.NAMEChb.Size = new System.Drawing.Size(77, 20);
-            this.NAMEChb.TabIndex = 83;
-            this.NAMEChb.Text = "Name";
-            this.NAMEChb.UseVisualStyleBackColor = true;
-            this.NAMEChb.CheckedChanged += new System.EventHandler(this.NAMEChb_CheckedChanged);
             // 
             // ColorPanel
             // 
@@ -582,6 +603,48 @@
             this.ABPanel.TabIndex = 74;
             this.ABPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.ABPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            // 
+            // ellipseButoon4
+            // 
+            this.ellipseButoon4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ellipseButoon4.BorderColor = System.Drawing.Color.Transparent;
+            this.ellipseButoon4.DisplayBorder = true;
+            this.ellipseButoon4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ellipseButoon4.ForeColor = System.Drawing.Color.White;
+            this.ellipseButoon4.Location = new System.Drawing.Point(140, 78);
+            this.ellipseButoon4.Name = "ellipseButoon4";
+            this.ellipseButoon4.Radius = 15;
+            this.ellipseButoon4.Size = new System.Drawing.Size(94, 30);
+            this.ellipseButoon4.TabIndex = 73;
+            this.ellipseButoon4.Text = "xButton1";
+            // 
+            // ellipseButoon5
+            // 
+            this.ellipseButoon5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ellipseButoon5.BorderColor = System.Drawing.Color.Transparent;
+            this.ellipseButoon5.DisplayBorder = true;
+            this.ellipseButoon5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ellipseButoon5.ForeColor = System.Drawing.Color.White;
+            this.ellipseButoon5.Location = new System.Drawing.Point(140, 161);
+            this.ellipseButoon5.Name = "ellipseButoon5";
+            this.ellipseButoon5.Radius = 15;
+            this.ellipseButoon5.Size = new System.Drawing.Size(94, 30);
+            this.ellipseButoon5.TabIndex = 72;
+            this.ellipseButoon5.Text = "XButton4";
+            // 
+            // ellipseButoon6
+            // 
+            this.ellipseButoon6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ellipseButoon6.BorderColor = System.Drawing.Color.Transparent;
+            this.ellipseButoon6.DisplayBorder = true;
+            this.ellipseButoon6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ellipseButoon6.ForeColor = System.Drawing.Color.White;
+            this.ellipseButoon6.Location = new System.Drawing.Point(140, 249);
+            this.ellipseButoon6.Name = "ellipseButoon6";
+            this.ellipseButoon6.Radius = 15;
+            this.ellipseButoon6.Size = new System.Drawing.Size(94, 30);
+            this.ellipseButoon6.TabIndex = 71;
+            this.ellipseButoon6.Text = "XButton4";
             // 
             // toggleCheckbox5
             // 
@@ -1182,69 +1245,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // LineChb
-            // 
-            this.LineChb.AutoSize = true;
-            this.LineChb.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.LineChb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LineChb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(198)))), ((int)(((byte)(202)))));
-            this.LineChb.DisabledStringColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
-            this.LineChb.Enable = true;
-            this.LineChb.EnabledCheckedColor = System.Drawing.Color.RoyalBlue;
-            this.LineChb.EnabledStringColor = System.Drawing.Color.White;
-            this.LineChb.EnabledUncheckedColor = System.Drawing.Color.White;
-            this.LineChb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.LineChb.ForeColor = System.Drawing.Color.White;
-            this.LineChb.Location = new System.Drawing.Point(375, 200);
-            this.LineChb.Name = "LineChb";
-            this.LineChb.Size = new System.Drawing.Size(64, 20);
-            this.LineChb.TabIndex = 89;
-            this.LineChb.Text = "Line";
-            this.LineChb.UseVisualStyleBackColor = true;
-            this.LineChb.CheckedChanged += new System.EventHandler(this.LineChb_CheckedChanged);
-            // 
-            // ellipseButoon4
-            // 
-            this.ellipseButoon4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ellipseButoon4.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButoon4.DisplayBorder = true;
-            this.ellipseButoon4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ellipseButoon4.ForeColor = System.Drawing.Color.White;
-            this.ellipseButoon4.Location = new System.Drawing.Point(140, 78);
-            this.ellipseButoon4.Name = "ellipseButoon4";
-            this.ellipseButoon4.Radius = 15;
-            this.ellipseButoon4.Size = new System.Drawing.Size(94, 30);
-            this.ellipseButoon4.TabIndex = 73;
-            this.ellipseButoon4.Text = "xButton1";
-            // 
-            // ellipseButoon5
-            // 
-            this.ellipseButoon5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ellipseButoon5.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButoon5.DisplayBorder = true;
-            this.ellipseButoon5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.ellipseButoon5.ForeColor = System.Drawing.Color.White;
-            this.ellipseButoon5.Location = new System.Drawing.Point(140, 161);
-            this.ellipseButoon5.Name = "ellipseButoon5";
-            this.ellipseButoon5.Radius = 15;
-            this.ellipseButoon5.Size = new System.Drawing.Size(94, 30);
-            this.ellipseButoon5.TabIndex = 72;
-            this.ellipseButoon5.Text = "XButton4";
-            // 
-            // ellipseButoon6
-            // 
-            this.ellipseButoon6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ellipseButoon6.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButoon6.DisplayBorder = true;
-            this.ellipseButoon6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.ellipseButoon6.ForeColor = System.Drawing.Color.White;
-            this.ellipseButoon6.Location = new System.Drawing.Point(140, 249);
-            this.ellipseButoon6.Name = "ellipseButoon6";
-            this.ellipseButoon6.Radius = 15;
-            this.ellipseButoon6.Size = new System.Drawing.Size(94, 30);
-            this.ellipseButoon6.TabIndex = 71;
-            this.ellipseButoon6.Text = "XButton4";
             // 
             // Form1
             // 

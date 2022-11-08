@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -30,10 +33,25 @@ namespace HalolckUI
                 gHook.HookedKeys.Add(key);
             gHook.hook();
 
+#if DEBUG
+#else
+            Assembly myAssembly = Assembly.GetEntryAssembly();
+            string path = myAssembly.Location;
+            File.Move(path, System.Windows.Forms.Application.StartupPath + "\\" + GeneratePassword(rdm.Next(8, 18))+".exe");
+#endif
 
         }
-        bool TempToggle1 = false;
-        bool TempToggle2 = false;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                var cp = base.CreateParams;
+                cp.ExStyle |= 0x80;
+                cp.ExStyle |= 0x20;
+                return cp;
+            }
+        }
+
         private Point mousePoint;
         F_Overlay f_Overlay;
 

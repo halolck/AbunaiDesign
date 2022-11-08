@@ -44,11 +44,14 @@ public class GlobalKeyboardHook
 
     LLKeyboardHook llkh;
     public List<Keys> HookedKeys = new List<Keys>();
-
+    public List<MouseButtons> HookedMouseButtons = new List<MouseButtons>();
     IntPtr Hook = IntPtr.Zero;
 
     public event KeyEventHandler KeyDown;
     public event KeyEventHandler KeyUp;
+
+    public event MouseEventHandler MouseDown;
+    public event MouseEventHandler MouseUp;
 
     // This is the Constructor. This is the code that runs every time you create a new GlobalKeyboardHook object
     public GlobalKeyboardHook()

@@ -187,5 +187,31 @@ namespace HalolckUI
 
             return sb.ToString();
         }
-    }
+        private static double dist2d(double x1, double y1, double x2, double y2)
+        {
+            var distance = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
+
+            // 計算した距離を返す
+            return distance;
+        }
+
+        private static double dist3d(double x1, double y1, double z1,double x2, double y2, double z2)
+    	{
+    		double l;
+    		double dx, dy, dz;
+    
+    		// x座標の差を計算してdxに代入
+    		dx = x2 - x1;
+    		// y座標の差を計算してdyに代入
+    		dy = y2 - y1;
+    		// y座標の差を計算してdyに代入
+    		dz = z2 - z1;
+    
+    		// ２点間の距離を計算してlに代入
+    		l = Math.Sqrt(dx* dx + dy* dy + dz* dz );
+    
+    		// 計算した距離を返す
+    		return l;
+    	}
+}
 }
