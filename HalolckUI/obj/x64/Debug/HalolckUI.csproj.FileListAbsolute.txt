@@ -19,7 +19,6 @@ C:\Users\User\source\repos\HalolckUI\HalolckUI\bin\x64\Debug\System.Numerics.Vec
 C:\Users\User\source\repos\HalolckUI\HalolckUI\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.csproj.SuggestedBindingRedirects.cache
-C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.Form1.resources
 C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.F_Overlay.resources
 C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.GUI.AB.resources
 C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.Properties.Resources.resources
@@ -29,3 +28,5 @@ C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.csproj.Fo
 C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.csproj.CopyComplete
 C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.exe
 C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.pdb
+C:\Users\User\source\repos\HalolckUI\HalolckUI\obj\x64\Debug\HalolckUI.DesignMain.resources
+C:\Users\User\source\repos\HalolckUI\HalolckUI\bin\x64\Debug\System.Security.Principal.Windows.xml

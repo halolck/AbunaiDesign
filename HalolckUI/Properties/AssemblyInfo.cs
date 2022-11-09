@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般情報は以下の属性セットを通して制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("awg35aaagafg34v6")]
+[assembly: AssemblyTitle("")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
-[assembly: Guid("e5549b12-73a9-4de6-967d-79f2ce6a931a")]
+[assembly: Guid("e5542b12-73a9-4de6-967d-79f2ce6a931a")]
 
 // アセンブリのバージョン情報は次の 4 つの値で構成されています:
 //
