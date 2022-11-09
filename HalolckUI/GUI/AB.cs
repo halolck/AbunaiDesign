@@ -84,7 +84,7 @@ namespace HalolckUI.GUI
 
         private void slider3_LValueChanged(object sender, CustomSlider.LEventArgs e)
         {
-            label9.Text = ((float)slider3.L_Value/10+0.9).ToString("F1");
+            label9.Text = ((float)slider3.L_Value/10).ToString("F1");
         }
 
         private void slider2_LValueChanged(object sender, CustomSlider.LEventArgs e)

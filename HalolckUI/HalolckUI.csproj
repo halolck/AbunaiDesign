@@ -58,6 +58,26 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Costura, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.5.7.0\lib\netstandard1.0\Costura.dll</HintPath>
@@ -268,7 +288,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AxisAlignedBox.cs" />
+    <Compile Include="memory\AxisAlignedBox.cs" />
     <Compile Include="custombutton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -278,10 +298,11 @@
     <Compile Include="MainGUI.Designer.cs">
       <DependentUpon>MainGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Matrix.cs" />
-    <Compile Include="Memory.cs" />
+    <Compile Include="memory\Matrix.cs" />
+    <Compile Include="memory\Memory.cs" />
     <Compile Include="memory\offsets.cs" />
-    <Compile Include="NativeMethods.cs" />
+    <Compile Include="memory\NativeMethods.cs" />
+    <Compile Include="memory\Player.cs" />
     <Compile Include="Olay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,10 +316,10 @@
     <Compile Include="GUI\AB.Designer.cs">
       <DependentUpon>AB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Vector2.cs" />
-    <Compile Include="Vector3.cs" />
-    <Compile Include="Vector4.cs" />
+    <Compile Include="memory\Program.cs" />
+    <Compile Include="memory\Vector2.cs" />
+    <Compile Include="memory\Vector3.cs" />
+    <Compile Include="memory\Vector4.cs" />
     <EmbeddedResource Include="MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>
     </EmbeddedResource>

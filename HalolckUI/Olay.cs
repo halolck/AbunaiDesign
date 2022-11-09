@@ -1,12 +1,16 @@
-﻿using System;
+﻿using HalolckUI.memory;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Management;
 using System.Windows.Forms;
@@ -37,6 +41,8 @@ namespace HalolckUI
         Graphics g;
         Size windowsize;
         string WINDOW_NAME = "Taskmgr";
+        private const string processName = "ac_client";//バラバラになっていることで別モニターのobsや画面共有にwallhackを、メイン画面はクリーンなままを可能としている
+        private Process process;
         System.Diagnostics.Process[] ps;
         IntPtr intPtr;
         #region CProperet
@@ -92,9 +98,10 @@ namespace HalolckUI
                 Application.Exit();
                 return;
             }
-
+            AttachGame();
             timer2.Start();
             timer1.Start();
+            timer3.Start();
             windowsize = new Size(this.Width, this.Height);
             canvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             //ImageオブジェクトのGraphicsオブジェクトを作成する
@@ -126,8 +133,12 @@ namespace HalolckUI
             //PictureBox1に表示する
             pictureBox1.Image = canvas;
         }
+        private List<Player> players = new List<Player>();
+        private int numPlayers;
+        private void PlayerGet(Graphics g)
+        {
 
-
+        }
 
         [DllImport("user32.dll")]
         private static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
@@ -172,9 +183,40 @@ namespace HalolckUI
 
         }
 
+       
+
         private void AttachGame()
         {
-            MessageBox.Show("Atatchiong!!");
+            int count = 0;
+            
+                //check if game is running
+            if (Memory.GetProcessesByName(processName, out process))
+            {
+
+
+                    //try to attach to game process
+                try
+                {
+                        //success  
+                    IntPtr handle = Memory.OpenProcess(process.Id);
+
+                }
+                catch (Exception ex)
+                {
+                    //fail
+                    MessageBox.Show("Attach failed: " + ex.Message);
+                    Application.Exit();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show(processName + "が見つかりませんでした。先に起動してください。");
+                Application.Exit();
+                return;
+            }
+
+
         }
 
         private static readonly string passwordChars = "wxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuv";
